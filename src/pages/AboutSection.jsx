@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Briefcase, Star, Code, Target, Zap } from 'lucide-react';
 import imgAbout from "../assets/cap.png";
+import { useNavigate } from 'react-router-dom';
 
 const StatCard = ({ icon: Icon, value, label }) => {
   return (
@@ -38,6 +39,11 @@ const ExpertiseCard = ({ icon: Icon, title, description }) => {
 };
 
 const AboutSection = () => {
+  const navigate =useNavigate();
+  const handleClick = () => {
+    navigate('/contact');
+  }
+
   const stats = [
     { 
       icon: Users,
@@ -149,6 +155,7 @@ Animé par une passion profonde pour l'innovation technologique, je suis dédié
 
             {/* CTA */}
             <motion.button
+              onClick={handleClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-shadow"

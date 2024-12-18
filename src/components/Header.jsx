@@ -7,7 +7,7 @@ import TBCode from './TBCode'; // Assuming this is your existing component
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const whatsappNumber = '+1234567890'; // Remplacez par votre numéro WhatsApp
+  const whatsappNumber = '+22966476760'; // Remplacez par votre numéro WhatsApp
   const whatsappMessage = 'Bonjour, je souhaiterais obtenir plus d\'informations.';
 
   const handleWhatsAppClick = () => {
@@ -84,16 +84,16 @@ const Header = () => {
             <Link to="/" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
               Accueil
             </Link>
-            <a href="#services" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
-              Services
+            <a href="about" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
+            À Propos
             </a>
-            <a href="#portfolio" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
+            <a href="portfolio" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
               Portfolio
             </a>
            {/*  <a href="#blog" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
               Blog
             </a> */}
-            <a href="#contact" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
+            <a href="contact" className="block py-2 text-primary dark:text-white hover:text-teal dark:hover:text-accent-light transition-colors duration-200">
               Contact
             </a>
             

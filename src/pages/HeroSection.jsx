@@ -2,7 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Smartphone, Database } from 'lucide-react';
 
+import { useNavigate } from 'react-router-dom';
+
 const HeroSection = () => {
+  const navigate =useNavigate();
+
+
+  const handleClick = () => {
+    navigate('/portfolio');
+  }
+  const handleClick2 = () => {
+    navigate('/contact');
+  }
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background gradient */}
@@ -32,6 +43,7 @@ const HeroSection = () => {
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <motion.button
+                onClick={handleClick}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 md:px-8 py-2 md:py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm md:text-base"
@@ -39,6 +51,7 @@ const HeroSection = () => {
                 Voir Portfolio
               </motion.button>
               <motion.button
+                onClick={handleClick2}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 md:px-8 py-2 md:py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition text-sm md:text-base"
